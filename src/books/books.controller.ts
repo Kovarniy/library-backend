@@ -5,7 +5,7 @@ import { BookFilterDto } from './models/book-filter-dto';
 import { Book } from './models/book';
 
 @ApiTags('Books')
-@Controller('book')
+@Controller('books')
 export class BooksController {
   constructor(private readonly libraryService: LibraryService) {}
 
