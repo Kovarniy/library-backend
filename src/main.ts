@@ -26,14 +26,14 @@ function enableSwagger(app) {
 function enableCors(app) {
   app.enableCors({
     origin: function (origin, callback) {
-      console.log('Origin:', origin);
-      if (!origin || (origin && origin.includes('localhost'))) {
-        console.log('allowed cors for:', origin);
-        callback(null, true);
-      } else {
-        console.log('blocked cors for:', origin);
-        callback(new Error('Not allowed by CORS'));
-      }
+      callback(null, true);
+      // if (!origin || (origin && origin.includes('localhost'))) {
+      //   console.log('allowed cors for:', origin);
+      //   callback(null, true);
+      // } else {
+      //   console.log('blocked cors for:', origin);
+      //   callback(new Error('Not allowed by CORS'));
+      // }
     },
     methods: 'GET,PATCH,PUT,POST,DELETE,UPDATE,OPTIONS',
     credentials: true,
